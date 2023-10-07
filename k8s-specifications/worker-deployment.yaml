@@ -4,6 +4,7 @@ metadata:
   labels:
     app: worker
   name: worker
+  namespace: voting-example
 spec:
   replicas: 1
   selector:
@@ -15,5 +16,5 @@ spec:
         app: worker
     spec:
       containers:
-      - image: dockersamples/examplevotingapp_worker
-        name: worker
+        - image: dockersamples/examplevotingapp_worker
+          name: worker
